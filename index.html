@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Money Star</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ background:#080808;
+ color:white;
+ font-family:Arial,sans-serif;
+ padding:18px;
+}
+.header{
+ text-align:center;
+ color:#ffd700;
+ font-size:30px;
+ font-weight:bold;
+ padding:20px;
+}
+.subtitle{text-align:center;color:#aaa}
+.balance{
+ background:linear-gradient(135deg,#332400,#080808);
+ border:1px solid #ffd700;
+ border-radius:18px;
+ padding:25px;
+ text-align:center;
+ margin:20px 0;
+}
+.balance h1{color:#ffd700;font-size:36px}
+.grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:12px;
+}
+.card{
+ background:#171717;
+ border:1px solid #c99b19;
+ border-radius:15px;
+ padding:22px 8px;
+ text-align:center;
+ cursor:pointer;
+}
+.card .icon{font-size:30px}
+.card h3{margin:10px 0 5px}
+.card p{color:#ffd700;margin:0;font-size:13px}
+.section{
+ margin-top:20px;
+ padding:18px;
+ background:#171717;
+ border:1px solid #c99b19;
+ border-radius:15px;
+}
+button{
+ background:#ffd700;
+ color:black;
+ border:0;
+ padding:13px;
+ border-radius:10px;
+ font-weight:bold;
+ width:100%;
+ margin-top:12px;
+}
+input{
+ width:100%;
+ padding:12px;
+ border-radius:8px;
+ border:1px solid #ffd700;
+ background:#222;
+ color:white;
+ margin-top:10px;
+}
+small{color:#aaa}
+</style>
+</head>
+
+<body>
+
+<div class="header">⭐ MONEY STAR ⭐</div>
+<div class="subtitle">WATCH • EARN • WITHDRAW</div>
+
+<div class="balance">
+ <p>YOUR BALANCE</p>
+ <h1>$0.00</h1>
+ <small>USDT (TON Network)</small>
+</div>
+
+<div class="grid">
+
+<div class="card" onclick="show('Watch Ads')">
+ <div class="icon">📺</div>
+ <h3>Watch Ads</h3>
+ <p>20 Ads = $3</p>
+</div>
+
+<div class="card" onclick="show('Daily Bonus')">
+ <div class="icon">🎁</div>
+ <h3>Daily Bonus</h3>
+ <p>Daily Reward</p>
+</div>
+
+<div class="card" onclick="show('Referral')">
+ <div class="icon">👥</div>
+ <h3>Invite Friends</h3>
+ <p>$0.50 Each</p>
+</div>
+
+<div class="card" onclick="show('Tasks')">
+ <div class="icon">🎯</div>
+ <h3>Complete Tasks</h3>
+ <p>3 Tasks = $0.15</p>
+</div>
+
+<div class="card" onclick="show('My Balance')">
+ <div class="icon">💎</div>
+ <h3>My Balance</h3>
+ <p>Check Balance</p>
+</div>
+
+<div class="card" onclick="show('Withdraw')">
+ <div class="icon">💳</div>
+ <h3>Withdraw</h3>
+ <p>Minimum $12</p>
+</div>
+
+</div>
+
+<div class="section">
+<h3>👥 Referral Program</h3>
+<p>Invite friends and earn $0.50 per eligible referral.</p>
+<button onclick="show('Referral')">Invite Friends</button>
+</div>
+
+<div class="section">
+<h3>💰 Earning Rules</h3>
+<p>📺 20 Ads = $3 USDT</p>
+<p>👥 1 Referral = $0.50 USDT</p>
+<p>🎯 1 Task = $0.05 USDT</p>
+<p>💳 Minimum Withdraw = $12 USDT</p>
+<p>🌐 Payment Network = TON</p>
+</div>
+
+<div class="section">
+<h3>⭐ MONEY STAR</h3>
+<p>Welcome to Money Star!</p>
+<small>Demo interface. Real rewards and payments are not active yet.</small>
+</div>
+
+<script>
+const tg = window.Telegram.WebApp;
+tg.ready();
+tg.expand();
+
+function show(page){
+ alert(page + " section will be activated soon!");
+}
+</script>
+
+</body>
+</html>
